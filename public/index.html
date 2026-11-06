@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Private Notes — MCP Starter</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Private notes</h1>
+        <p id="identity">Connecting…</p>
+        <a id="logout" href="/cdn-cgi/access/logout" hidden>Sign out</a>
+      </header>
+      <p>
+        One account, one workspace. The dashboard and MCP tools share the same ownership checks.
+      </p>
+      <p id="error" role="alert" hidden></p>
+      <form id="editor">
+        <h2 id="mode">Add a note</h2>
+        <label for="title">Title</label
+        ><input id="title" name="title" required maxlength="180" /><label for="body">Body</label
+        ><textarea id="body" name="body" maxlength="8000" rows="5"></textarea
+        ><button id="save">Save note</button
+        ><button id="cancel" type="button" hidden>Cancel edit</button>
+      </form>
+      <section aria-labelledby="notes-heading">
+        <h2 id="notes-heading">Your notes</h2>
+        <div id="notes" aria-live="polite">Loading…</div>
+      </section>
+      <p class="footnote">
+        Example application. No LLM, external data connection or cross-account admin access is
+        included.
+      </p>
+    </main>
+  </body>
+</html>

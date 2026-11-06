@@ -1,0 +1,28 @@
+{
+  "name": "private-mcp-starter",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Owner-scoped Cloudflare Workers/D1 MCP starter with Access JWT verification",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "wrangler dev --config wrangler.local.jsonc --ip 127.0.0.1 --port 8110",
+    "db:local": "wrangler d1 migrations apply private-mcp-starter --local --config wrangler.local.jsonc",
+    "test": "node --test tests/*.test.js",
+    "check": "wrangler deploy --dry-run",
+    "deploy": "wrangler deploy",
+    "format:check": "prettier --check src public tests docs *.jsonc README.md"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "jose": "6.2.15",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "prettier": "3.9.6",
+    "wrangler": "4.158.0"
+  }
+}
