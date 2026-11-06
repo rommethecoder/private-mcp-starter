@@ -56,3 +56,7 @@ See [Maintenance](docs/MAINTENANCE.md) for migrations, backups, dependency updat
 ## Provenance
 
 Original example by Terry (Romme) Felton, extracted with AI assistance from owner-scoped personal applications. MIT licensed. Cloudflare, OpenAI and the MCP SDK are independent projects; this is not an official template or an endorsement.
+
+## How this started
+
+[Read the project history](docs/PROJECT_HISTORY.md) for the original problem, the choices behind the first release and the checks that still need hands-on verification.
